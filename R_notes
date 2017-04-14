@@ -1,0 +1,901 @@
+{
+  "paragraphs": [
+    {
+      "text": "sc.version",
+      "user": "jayapradag@qubole.com",
+      "dateUpdated": "Apr 14, 2017 1:53:56 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1492134829395_-640897948",
+      "id": "20170414-015349_391779880",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "res0: String \u003d 2.0.2\n"
+      },
+      "dateCreated": "Apr 14, 2017 1:53:49 AM",
+      "dateStarted": "Apr 14, 2017 1:53:56 AM",
+      "dateFinished": "Apr 14, 2017 1:54:21 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%r\npeople \u003c- read.df(\"oraclebmc://qubole_sandbox@qubole/testdata/spark/products_csv/month\u003d2015-02/1.csv\", \"csv\")\nhead(people)",
+      "user": "jayapradag@qubole.com",
+      "dateUpdated": "Apr 14, 2017 2:11:19 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "group": "spark",
+          "values": [
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.33%3A8088%2Fproxy%2Fapplication_1492132969841_0006/jobs/job?spark\u003dtrue\u0026id\u003d11",
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.33%3A8088%2Fproxy%2Fapplication_1492132969841_0006/jobs/job?spark\u003dtrue\u0026id\u003d12"
+          ],
+          "interpreterSettingId": "2CDSZ6NE6481492132958377"
+        }
+      },
+      "jobName": "paragraph_1492134836512_901960465",
+      "id": "20170414-015356_1435410636",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\n_c0 _c1\n\n\n1 table 100\n2    tv 500\n3   car  10\n4   tap 100\n\n\n\n"
+      },
+      "dateCreated": "Apr 14, 2017 1:53:56 AM",
+      "dateStarted": "Apr 14, 2017 2:11:19 AM",
+      "dateFinished": "Apr 14, 2017 2:11:20 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%r \nprintSchema(people)\n",
+      "user": "jayapradag@qubole.com",
+      "dateUpdated": "Apr 14, 2017 2:11:23 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1492135146832_-907653174",
+      "id": "20170414-015906_2008195394",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nroot\n |– _c0: string (nullable \u003d true)\n |– _c1: string (nullable \u003d true)\n\n\n\n"
+      },
+      "dateCreated": "Apr 14, 2017 1:59:06 AM",
+      "dateStarted": "Apr 14, 2017 2:11:23 AM",
+      "dateFinished": "Apr 14, 2017 2:11:23 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%r\nwrite.df(people, path \u003d \"oraclebmc://qubole_sandbox@qubole/testdata/spark/people.parquet\", source \u003d \"parquet\", mode \u003d \"overwrite\")",
+      "user": "jayapradag@qubole.com",
+      "dateUpdated": "Apr 14, 2017 2:11:30 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "group": "spark",
+          "values": [
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.33%3A8088%2Fproxy%2Fapplication_1492132969841_0006/jobs/job?spark\u003dtrue\u0026id\u003d13"
+          ],
+          "interpreterSettingId": "2CDSZ6NE6481492132958377"
+        }
+      },
+      "jobName": "paragraph_1492135581934_1190591660",
+      "id": "20170414-020621_1365171867",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\n\n\n\n"
+      },
+      "dateCreated": "Apr 14, 2017 2:06:21 AM",
+      "dateStarted": "Apr 14, 2017 2:11:30 AM",
+      "dateFinished": "Apr 14, 2017 2:11:31 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%r\npeople_1 \u003c- read.df(\"oraclebmc://qubole_sandbox@qubole/testdata/spark/people.parquet\", \"parquet\")\n\n",
+      "user": "jayapradag@qubole.com",
+      "dateUpdated": "Apr 14, 2017 2:11:34 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "group": "spark",
+          "values": [
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.33%3A8088%2Fproxy%2Fapplication_1492132969841_0006/jobs/job?spark\u003dtrue\u0026id\u003d14"
+          ],
+          "interpreterSettingId": "2CDSZ6NE6481492132958377"
+        }
+      },
+      "jobName": "paragraph_1492135710084_-1607150745",
+      "id": "20170414-020830_1218897049",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\n\n\n\n"
+      },
+      "dateCreated": "Apr 14, 2017 2:08:30 AM",
+      "dateStarted": "Apr 14, 2017 2:11:34 AM",
+      "dateFinished": "Apr 14, 2017 2:11:35 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%r\nhead(people_1)",
+      "user": "jayapradag@qubole.com",
+      "dateUpdated": "Apr 14, 2017 2:11:37 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "group": "spark",
+          "values": [
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.33%3A8088%2Fproxy%2Fapplication_1492132969841_0006/jobs/job?spark\u003dtrue\u0026id\u003d15"
+          ],
+          "interpreterSettingId": "2CDSZ6NE6481492132958377"
+        }
+      },
+      "jobName": "paragraph_1492135773737_985980221",
+      "id": "20170414-020933_774169260",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\n_c0 _c1\n\n\n1 table 100\n2    tv 500\n3   car  10\n4   tap 100\n\n\n\n"
+      },
+      "dateCreated": "Apr 14, 2017 2:09:33 AM",
+      "dateStarted": "Apr 14, 2017 2:11:37 AM",
+      "dateFinished": "Apr 14, 2017 2:11:37 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%r\nsql(\"CREATE TABLE IF NOT EXISTS items (Item STRING, value INT)\")",
+      "user": "jayapradag@qubole.com",
+      "dateUpdated": "Apr 14, 2017 2:12:36 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1492135792795_1212612647",
+      "id": "20170414-020952_461299828",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nSparkDataFrame[]\n\n\n\n"
+      },
+      "dateCreated": "Apr 14, 2017 2:09:52 AM",
+      "dateStarted": "Apr 14, 2017 2:12:36 AM",
+      "dateFinished": "Apr 14, 2017 2:12:49 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%r\nsql(\"LOAD DATA INPATH \u0027oraclebmc://qubole_sandbox@qubole/testdata/spark/people.parquet\u0027 INTO TABLE items\")",
+      "user": "jayapradag@qubole.com",
+      "dateUpdated": "Apr 14, 2017 2:14:16 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1492135956330_-992136468",
+      "id": "20170414-021236_1365890285",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nSparkDataFrame[]\n\n\n\n"
+      },
+      "dateCreated": "Apr 14, 2017 2:12:36 AM",
+      "dateStarted": "Apr 14, 2017 2:14:16 AM",
+      "dateFinished": "Apr 14, 2017 2:14:35 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%r\nresults \u003c- sql(\"FROM items SELECT Item, value\")\n\n# results is now a SparkDataFrame\nhead(results)\n",
+      "user": "jayapradag@qubole.com",
+      "dateUpdated": "Apr 14, 2017 2:18:40 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "group": "spark",
+          "values": [
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.33%3A8088%2Fproxy%2Fapplication_1492132969841_0006/jobs/job?spark\u003dtrue\u0026id\u003d16",
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.33%3A8088%2Fproxy%2Fapplication_1492132969841_0006/jobs/job?spark\u003dtrue\u0026id\u003d17"
+          ],
+          "interpreterSettingId": "2CDSZ6NE6481492132958377"
+        }
+      },
+      "jobName": "paragraph_1492136056765_-1369854263",
+      "id": "20170414-021416_682936208",
+      "dateCreated": "Apr 14, 2017 2:14:16 AM",
+      "dateStarted": "Apr 14, 2017 2:18:40 AM",
+      "status": "ABORT",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql\nselect * from items",
+      "user": "jayapradag@qubole.com",
+      "dateUpdated": "Apr 14, 2017 2:21:26 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "item",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "value",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "item",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "value",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "group": "spark",
+          "values": [
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.33%3A8088%2Fproxy%2Fapplication_1492132969841_0006/jobs/job?spark\u003dtrue\u0026id\u003d22",
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.33%3A8088%2Fproxy%2Fapplication_1492132969841_0006/jobs/job?spark\u003dtrue\u0026id\u003d23"
+          ],
+          "interpreterSettingId": "2CDSZ6NE6481492132958377"
+        }
+      },
+      "jobName": "paragraph_1492136320208_-1989144582",
+      "id": "20170414-021840_833785478",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "item\tvalue\nPAR1\u0015\u0000\u0015F\u0015H,\u0015\b\u0015\u0000\u0015\u0006\u0015\b\u001c\u0018\u0002tv\u0018\u0003car\u0016\u0000\u0000\u0000\u0000#8\u0002\u0000\u0000\u0000\u0003\u000f\u0005\u0000\u0000\u0000table\tnull\n$\u0002\u0000\u0000\u0000\u0003\u000f\u0002\u0003$\u0000\u0015\u0002\u0019\u003cH\fspark_schema\u0015\u0004\u0000\u0015\f%\u0002\u0018\u0003_c0%\u0000\u0000\u0015\f%\u0002\u0018\u0003_c1%\u0000\u0000\u0016\b\u0019\u001c\u0019,\u0026\b\u001c\u0015\f\u00195\u0006\u0000\b\u0019\u0018\u0003_c0\u0015\u0002\u0016\b\u0016�\tnull\n"
+      },
+      "dateCreated": "Apr 14, 2017 2:18:40 AM",
+      "dateStarted": "Apr 14, 2017 2:21:26 AM",
+      "dateFinished": "Apr 14, 2017 2:21:30 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%r\ndf \u003c- read.df(\"oraclebmc://qubole_sandbox@qubole/testdata/spark/products_csv/month\u003d2014-12/1.csv\", \"csv\")\nhead(df)",
+      "user": "jayapradag@qubole.com",
+      "dateUpdated": "Apr 14, 2017 6:20:02 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "group": "spark",
+          "values": [
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.36%3A8088%2Fproxy%2Fapplication_1492147147939_0007/jobs/job?spark\u003dtrue\u0026id\u003d4",
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.36%3A8088%2Fproxy%2Fapplication_1492147147939_0007/jobs/job?spark\u003dtrue\u0026id\u003d5"
+          ],
+          "interpreterSettingId": "2CEXHX761481492147136474"
+        }
+      },
+      "jobName": "paragraph_1492136435559_-1257551388",
+      "id": "20170414-022035_878973592",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\n_c0 _c1\n\n\n1 brush 100\n2 paste 200\n3 chair  50\n\n\n\n"
+      },
+      "dateCreated": "Apr 14, 2017 2:20:35 AM",
+      "dateStarted": "Apr 14, 2017 6:20:02 AM",
+      "dateFinished": "Apr 14, 2017 6:20:04 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%r\nwrite.df(df, path \u003d \"oraclebmc://qubole_sandbox@qubole/testdata/spark/item.json\", source \u003d \"json\", mode \u003d \"overwrite\")",
+      "user": "jayapradag@qubole.com",
+      "dateUpdated": "Apr 14, 2017 6:21:24 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "group": "spark",
+          "values": [
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.36%3A8088%2Fproxy%2Fapplication_1492147147939_0007/jobs/job?spark\u003dtrue\u0026id\u003d6"
+          ],
+          "interpreterSettingId": "2CEXHX761481492147136474"
+        }
+      },
+      "jobName": "paragraph_1492149406562_1637126581",
+      "id": "20170414-055646_864717047",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\n\n\n\n"
+      },
+      "dateCreated": "Apr 14, 2017 5:56:46 AM",
+      "dateStarted": "Apr 14, 2017 6:21:24 AM",
+      "dateFinished": "Apr 14, 2017 6:21:27 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%r\nwrite.df(df, path \u003d \"oraclebmc://qubole_sandbox@qubole/testdata/spark/item.txt\", mode \u003d \"overwrite\")",
+      "user": "jayapradag@qubole.com",
+      "dateUpdated": "Apr 14, 2017 6:27:01 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "group": "spark",
+          "values": [
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.36%3A8088%2Fproxy%2Fapplication_1492147147939_0007/jobs/job?spark\u003dtrue\u0026id\u003d11"
+          ],
+          "interpreterSettingId": "2CEXHX761481492147136474"
+        }
+      },
+      "jobName": "paragraph_1492151175534_741727758",
+      "id": "20170414-062615_936687266",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\n\n\n\n"
+      },
+      "dateCreated": "Apr 14, 2017 6:26:15 AM",
+      "dateStarted": "Apr 14, 2017 6:27:01 AM",
+      "dateFinished": "Apr 14, 2017 6:27:03 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%r\ndf1 \u003c- read.json(\"oraclebmc://qubole_sandbox@qubole/testdata/spark/item.json\")\nhead(df1)",
+      "user": "jayapradag@qubole.com",
+      "dateUpdated": "Apr 14, 2017 6:22:20 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "group": "spark",
+          "values": [
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.36%3A8088%2Fproxy%2Fapplication_1492147147939_0007/jobs/job?spark\u003dtrue\u0026id\u003d7",
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.36%3A8088%2Fproxy%2Fapplication_1492147147939_0007/jobs/job?spark\u003dtrue\u0026id\u003d8"
+          ],
+          "interpreterSettingId": "2CEXHX761481492147136474"
+        }
+      },
+      "jobName": "paragraph_1492150872302_1735935361",
+      "id": "20170414-062112_458220502",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\n_c0 _c1\n\n\n1 brush 100\n2 paste 200\n3 chair  50\n\n\n\n"
+      },
+      "dateCreated": "Apr 14, 2017 6:21:12 AM",
+      "dateStarted": "Apr 14, 2017 6:22:20 AM",
+      "dateFinished": "Apr 14, 2017 6:22:21 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%r\nsql(\"CREATE TABLE IF NOT EXISTS items1 (Item STRING, value INT)\")\nsql(\"LOAD DATA  INPATH \u0027oraclebmc://qubole_sandbox@qubole/testdata/spark/item.txt\u0027 INTO TABLE items1\")",
+      "user": "jayapradag@qubole.com",
+      "dateUpdated": "Apr 14, 2017 6:27:13 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1492150940300_-1765633207",
+      "id": "20170414-062220_1852111109",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nSparkDataFrame[]\nSparkDataFrame[]\n\n\n\n"
+      },
+      "dateCreated": "Apr 14, 2017 6:22:20 AM",
+      "dateStarted": "Apr 14, 2017 6:27:13 AM",
+      "dateFinished": "Apr 14, 2017 6:27:37 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%sql select * from items1",
+      "user": "jayapradag@qubole.com",
+      "dateUpdated": "Apr 14, 2017 6:28:04 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [
+            {
+              "name": "item",
+              "index": 0.0,
+              "aggr": "sum"
+            }
+          ],
+          "values": [
+            {
+              "name": "value",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          ],
+          "groups": [],
+          "scatter": {
+            "xAxis": {
+              "name": "item",
+              "index": 0.0,
+              "aggr": "sum"
+            },
+            "yAxis": {
+              "name": "value",
+              "index": 1.0,
+              "aggr": "sum"
+            }
+          }
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/sql"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "group": "spark",
+          "values": [
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.36%3A8088%2Fproxy%2Fapplication_1492147147939_0007/jobs/job?spark\u003dtrue\u0026id\u003d14",
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.36%3A8088%2Fproxy%2Fapplication_1492147147939_0007/jobs/job?spark\u003dtrue\u0026id\u003d15"
+          ],
+          "interpreterSettingId": "2CEXHX761481492147136474"
+        }
+      },
+      "jobName": "paragraph_1492151071794_1172525577",
+      "id": "20170414-062431_40449511",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TABLE",
+        "msg": "item\tvalue\n{\"_c0\":\"brush\",\"_c1\":\"100\"}\tnull\n{\"_c0\":\"paste\",\"_c1\":\"200\"}\tnull\n{\"_c0\":\"chair\",\"_c1\":\"50\"}\tnull\nPAR1\u0015\u0000\u0015B\u0015D,\u0015\u0006\u0015\u0000\u0015\u0006\u0015\b\u001c\u0018\u0005paste\u0018\u0005brush\u0016\u0000\u0000\u0000\u0000!8\u0002\u0000\u0000\u0000\u0003\u0007\u0005\u0000\u0000\u0000brush\tnull\n"
+      },
+      "dateCreated": "Apr 14, 2017 6:24:31 AM",
+      "dateStarted": "Apr 14, 2017 6:28:04 AM",
+      "dateFinished": "Apr 14, 2017 6:28:09 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%r\ndf \u003c- as.DataFrame(faithful)",
+      "user": "jayapradag@qubole.com",
+      "dateUpdated": "Apr 14, 2017 6:32:40 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "group": "spark",
+          "values": [
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.36%3A8088%2Fproxy%2Fapplication_1492147147939_0007/jobs/job?spark\u003dtrue\u0026id\u003d16"
+          ],
+          "interpreterSettingId": "2CEXHX761481492147136474"
+        }
+      },
+      "jobName": "paragraph_1492151141887_302916442",
+      "id": "20170414-062541_645119727",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\n\n\n\n"
+      },
+      "dateCreated": "Apr 14, 2017 6:25:41 AM",
+      "dateStarted": "Apr 14, 2017 6:32:40 AM",
+      "dateFinished": "Apr 14, 2017 6:32:41 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%r\nfamilies \u003c- c(\"gaussian\", \"poisson\")\ntrain \u003c- function(family) {\n  model \u003c- glm(Sepal.Length ~ Sepal.Width + Species, iris, family \u003d family)\n  summary(model)\n}\n# Return a list of model\u0027s summaries\nmodel.summaries \u003c- spark.lapply(families, train)\n\n# Print the summary of each model\nprint(model.summaries)\n",
+      "user": "jayapradag@qubole.com",
+      "dateUpdated": "Apr 14, 2017 6:33:33 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "group": "spark",
+          "values": [
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.36%3A8088%2Fproxy%2Fapplication_1492147147939_0007/jobs/job?spark\u003dtrue\u0026id\u003d17"
+          ],
+          "interpreterSettingId": "2CEXHX761481492147136474"
+        }
+      },
+      "jobName": "paragraph_1492151560811_1523889979",
+      "id": "20170414-063240_1270080542",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\n[[1]]\n\nCall:\nglm(formula \u003d Sepal.Length ~ Sepal.Width + Species, family \u003d family, \n    data \u003d iris)\n\nDeviance Residuals: \n     Min        1Q    Median        3Q       Max\n-1.30711  -0.25713  -0.05325   0.19542   1.41253  \n\nCoefficients:\n                  Estimate Std. Error t value Pr(\u0026gt;|t|)\n(Intercept)         2.2514     0.3698   6.089 9.57e-09 ***\nSepal.Width         0.8036     0.1063   7.557 4.19e-12 ***\nSpeciesversicolor   1.4587     0.1121  13.012  \u0026lt; 2e-16 ***\n\nSpeciesvirginica    1.9468     0.1000  19.465  \u0026lt; 2e-16 ***\n\nSignif. codes:  0 \u0027**\u0027 0.001 \u0027\u0027 0.01 \u0027\u0027 0.05 \u0027.\u0027 0.1 \u0027 \u0027 1\n\n(Dispersion parameter for gaussian family taken to be 0.1918059)\n\nNull deviance: 102.168  on 149  degrees of freedom\n\n\nResidual deviance:  28.004  on 146  degrees of freedom\nAIC: 183.94\n\nNumber of Fisher Scoring iterations: 2\n\n[[2]]\n\nCall:\nglm(formula \u003d Sepal.Length ~ Sepal.Width + Species, family \u003d family, \n    data \u003d iris)\n\nDeviance Residuals: \n     Min        1Q    Median        3Q       Max\n-0.52652  -0.10966  -0.01230   0.07755   0.56101  \n\nCoefficients:\n                  Estimate Std. Error z value Pr(\u0026gt;|z|)\n(Intercept)        1.13033    0.35454   3.188 0.001432 ** \nSepal.Width        0.13971    0.10119   1.381 0.167361\nSpeciesversicolor  0.26277    0.10901   2.410 0.015931 *  \n\nSpeciesvirginica   0.33842    0.09587   3.530 0.000416 ***\n\nSignif. codes:  0 \u0027**\u0027 0.001 \u0027\u0027 0.01 \u0027\u0027 0.05 \u0027.\u0027 0.1 \u0027 \u0027 1\n\n(Dispersion parameter for poisson family taken to be 1)\n\nNull deviance: 17.3620  on 149  degrees of freedom\n\n\nResidual deviance:  4.5202  on 146  degrees of freedom\nAIC: Inf\n\nNumber of Fisher Scoring iterations: 3\n\n\n\n"
+      },
+      "dateCreated": "Apr 14, 2017 6:32:40 AM",
+      "dateStarted": "Apr 14, 2017 6:33:33 AM",
+      "dateFinished": "Apr 14, 2017 6:33:34 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%r\ndf \u003c- createDataFrame(iris)\n model \u003c- spark.glm(df, Sepal_Length ~ Sepal_Width, family \u003d \"gaussian\")\n summary(model)",
+      "user": "jayapradag@qubole.com",
+      "dateUpdated": "Apr 14, 2017 6:34:48 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "runtimeInfos": {
+        "jobUrl": {
+          "propertyName": "jobUrl",
+          "label": "JOB UI",
+          "group": "spark",
+          "values": [
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.36%3A8088%2Fproxy%2Fapplication_1492147147939_0007/jobs/job?spark\u003dtrue\u0026id\u003d18",
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.36%3A8088%2Fproxy%2Fapplication_1492147147939_0007/jobs/job?spark\u003dtrue\u0026id\u003d19",
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.36%3A8088%2Fproxy%2Fapplication_1492147147939_0007/jobs/job?spark\u003dtrue\u0026id\u003d20",
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.36%3A8088%2Fproxy%2Fapplication_1492147147939_0007/jobs/job?spark\u003dtrue\u0026id\u003d21",
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.36%3A8088%2Fproxy%2Fapplication_1492147147939_0007/jobs/job?spark\u003dtrue\u0026id\u003d22",
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.36%3A8088%2Fproxy%2Fapplication_1492147147939_0007/jobs/job?spark\u003dtrue\u0026id\u003d23",
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.36%3A8088%2Fproxy%2Fapplication_1492147147939_0007/jobs/job?spark\u003dtrue\u0026id\u003d24",
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.36%3A8088%2Fproxy%2Fapplication_1492147147939_0007/jobs/job?spark\u003dtrue\u0026id\u003d25",
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.36%3A8088%2Fproxy%2Fapplication_1492147147939_0007/jobs/job?spark\u003dtrue\u0026id\u003d26",
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.36%3A8088%2Fproxy%2Fapplication_1492147147939_0007/jobs/job?spark\u003dtrue\u0026id\u003d27",
+            "https://oraclevnext.qubole.net/cluster-proxy?encodedUrl\u003dhttp%3A%2F%2F10.0.0.36%3A8088%2Fproxy%2Fapplication_1492147147939_0007/jobs/job?spark\u003dtrue\u0026id\u003d28"
+          ],
+          "interpreterSettingId": "2CEXHX761481492147136474"
+        }
+      },
+      "jobName": "paragraph_1492151613886_633073682",
+      "id": "20170414-063333_570173249",
+      "result": {
+        "code": "SUCCESS",
+        "type": "TEXT",
+        "msg": "\nDeviance Residuals: \n(Note: These are approximate quantiles with relative error \u0026lt;\u003d 0.01)\n     Min        1Q    Median        3Q       Max\n-1.55614  -0.64446  -0.12315   0.53321   2.22255  \n\nCoefficients:\n             Estimate  Std. Error  t value  Pr(\u0026gt;|t|)\n(Intercept)  6.5262    0.4789      13.628   0\nSepal_Width  -0.22336  0.15508     -1.4403  0.1519  \n\n(Dispersion parameter for gaussian family taken to be 0.6807844)\n\nNull deviance: 102.17  on 149  degrees of freedom\n\n\nResidual deviance: 100.76  on 148  degrees of freedom\nAIC: 372\n\nNumber of Fisher Scoring iterations: 1\n\n\n\n"
+      },
+      "dateCreated": "Apr 14, 2017 6:33:33 AM",
+      "dateStarted": "Apr 14, 2017 6:34:48 AM",
+      "dateFinished": "Apr 14, 2017 6:34:55 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1492151688140_1005049247",
+      "id": "20170414-063448_103772883",
+      "dateCreated": "Apr 14, 2017 6:34:48 AM",
+      "status": "READY",
+      "progressUpdateIntervalMs": 500
+    }
+  ],
+  "name": "Rscripts",
+  "id": "2WSVFG57AR1492134820",
+  "angularObjects": {
+    "2CEXHX761481492147136474": [],
+    "2CCX3X9PA481492147136525": [],
+    "2CDCY7NMV481492147136522": [],
+    "2CE6RPA99481492147136528": []
+  },
+  "config": {},
+  "info": {},
+  "source": "FCN"
+}

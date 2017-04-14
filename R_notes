@@ -875,14 +875,84 @@
       "progressUpdateIntervalMs": 500
     },
     {
-      "config": {},
+      "text": "%r\nschema \u003c- structType(structField(\"eruptions\", \"double\"), structField(\"waiting\", \"double\"),\n                     structField(\"waiting_secs\", \"double\"))\ndf1 \u003c- dapply(df, function(x) { x \u003c- cbind(x, x$waiting * 60) }, schema)\nhead(collect(df1))",
+      "user": "jayapradag@qubole.com",
+      "dateUpdated": "Apr 14, 2017 9:08:17 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
       "settings": {
         "params": {},
         "forms": {}
       },
       "jobName": "paragraph_1492151688140_1005049247",
       "id": "20170414-063448_103772883",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\n\u003cpre\u003e\u003ccode\u003eError in (function (classes, fdef, mtable) : unable to find an inherited method for function \u0027dapply\u0027 for signature \u0027\"function\", \"function\", \"structType\"\u0027\n\u003c/code\u003e\u003c/pre\u003e\n\n\u003cpre\u003e\u003ccode\u003eError in collect(df1): object \u0027df1\u0027 not found\n\u003c/code\u003e\u003c/pre\u003e\n\n\n\n"
+      },
       "dateCreated": "Apr 14, 2017 6:34:48 AM",
+      "dateStarted": "Apr 14, 2017 9:08:17 AM",
+      "dateFinished": "Apr 14, 2017 9:08:54 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "text": "%r\nhead(summarize(groupBy(df, df$waiting), count \u003d n(df$waiting)))\n",
+      "user": "jayapradag@qubole.com",
+      "dateUpdated": "Apr 14, 2017 9:09:57 AM",
+      "config": {
+        "colWidth": 12.0,
+        "graph": {
+          "mode": "table",
+          "height": 300.0,
+          "optionOpen": false,
+          "keys": [],
+          "values": [],
+          "groups": [],
+          "scatter": {}
+        },
+        "enabled": true,
+        "editorMode": "ace/mode/scala"
+      },
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1492160897103_-1054586665",
+      "id": "20170414-090817_658882774",
+      "result": {
+        "code": "SUCCESS",
+        "type": "HTML",
+        "msg": "\n\u003cpre\u003e\u003ccode\u003eError in (function (classes, fdef, mtable) : unable to find an inherited method for function \u0027groupBy\u0027 for signature \u0027\"function\"\u0027\n\u003c/code\u003e\u003c/pre\u003e\n\n\n\n"
+      },
+      "dateCreated": "Apr 14, 2017 9:08:17 AM",
+      "dateStarted": "Apr 14, 2017 9:09:57 AM",
+      "dateFinished": "Apr 14, 2017 9:09:57 AM",
+      "status": "FINISHED",
+      "progressUpdateIntervalMs": 500
+    },
+    {
+      "config": {},
+      "settings": {
+        "params": {},
+        "forms": {}
+      },
+      "jobName": "paragraph_1492160997365_-1779114816",
+      "id": "20170414-090957_1271859995",
+      "dateCreated": "Apr 14, 2017 9:09:57 AM",
       "status": "READY",
       "progressUpdateIntervalMs": 500
     }
@@ -890,10 +960,10 @@
   "name": "Rscripts",
   "id": "2WSVFG57AR1492134820",
   "angularObjects": {
-    "2CEXHX761481492147136474": [],
-    "2CCX3X9PA481492147136525": [],
-    "2CDCY7NMV481492147136522": [],
-    "2CE6RPA99481492147136528": []
+    "2CG18UQ49481492155526480": [],
+    "2CDKVCH1H481492155526431": [],
+    "2CFPFY84G481492155526478": [],
+    "2CES4QH4Z481492155526484": []
   },
   "config": {},
   "info": {},
